@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  <!--Screen Size Script-->
+  <script>
+    function myFunction() {
+    var w = window.outerWidth;
+    var h = window.outerHeight;
+    var txt = "Window size: width=" + w + ", height=" + h;
+    document.getElementById("demo").innerHTML = txt;
+}
+</script>
+
+<!--Jquery Search Section-->
+<script>
+        $(document).ready(function(){
+            $("#filterInput").on("keyup",
+            function() {
+                var value =
+                $(this).val().toLowerCase();
+                $("#filterDiv *").filter(function()
+                {
+                    $(this).toggle($(this).text().toLocaleLowerCase().indexOf(value) > -1)
+                });
+            });
+        });
+    </script>
+
+ <!--GoogleMap Section-->   
+  <script>
+        function myMap() {
+            var myCenter = new google.maps.LatLng(4.7774,7.0134);
+            var mapCanvas = document.getElementById("map");
+            var mapOptions = {center: myCenter, zoom: 10};
+            var map = new google.maps.Map(mapCanvas, mapOptions);
+            var marker = new google.maps.Marker({position:myCenter});
+            marker.setMap(map);
+          }
+  </script>
+
+<!--Scroll up  script section-->
+  <script>
+  // When the user scrolls down 400px from the top of the document, show the button
+  window.onscroll = function() {scrollFunction()};
+  
+  function scrollFunction() {
+      if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) {
+          document.getElementById("myBtn").style.display = "block";
+      } else {
+          document.getElementById("myBtn").style.display = "none";
+      }
+  }
+  
+  // When the user clicks on the button, scroll to the top of the document
+  function topFunction() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+  }
+  </script>
+  
+<script src= "https://maps.googleapis.com/maps/api/js?key=AIzaSyCc06D370rJorR1oi5RaoyC5sWOfUXbtso&callback=myMap">
+</script>
+
+<style>
+    * {
+        box-sizing: border-box;
+    }
+    .grid-container1 {
+        display: grid;
+        grid-auto-columns: auto auto;
+        justify-content: center;
+        grid-gap: 15px;
+}
+    .grid-container1 > div {
+        text-align: center;
+    }
+    .grid-item3 {
+        grid-column: 1 / span 2;
+    }
+    .fa-twitter-square {
+        color: skyblue;
+    }
+    .fa-facebook-square {
+        color: blue;
+    }
+    .fa-instagram {
+        color: rgb(6, 6, 230);
+    }
+    .fa-youtube-square {
+        color: red;
+    }
+    .fa-rss-square {
+        color: orangered;
+    }
+    .navBarColor {
+        background-color: rgb(2, 2, 49);
+    }
+    .menuSize {
+        font-size: 15px;
+    }
+    .nav-item, .dropdown-item {
+        color: white;
+        font-size: 11px;
+        border-bottom: 1px solid gray;
+    }
+    .dropdown-item1 {
+        border-top: 1px solid gray;
+     }
+     .dropdown-item7 {
+         border-bottom: none;
+     }
+    .dropdown-item:hover {
+        color: red;
+        background-color: rgb(2, 2, 49);
+    }
+    .fa-angle-down {
+        position: absolute;
+        right: 7px;
+    }
+    .regularA, .marshalA {
+        margin-left: 15px;
+    }
+    /* Make carousel image fully responsive */
+    .carousel-inner img {
+        width: 100%;
+        height: auto;
+    }
+    .qPolicyDiv {
+        border: 1px solid gray;
+    }
+    .max-auto {
+        width: 100%;
+        height: auto;
+    }
+    .btn-default {
+        color: white;
+        background: blue;
+    }
+    .filterDiv > ul > li > a {
+        color: blue;
+        font-size: 13px;
+    }
+    .sflex-container {
+        display: flex;
+        background: rgb(0, 0, 255);
+        margin-bottom: 5px;
+        justify-content: center;
+        align-items: center;
+        height: 30px;
+        width: 100px;
+    }
+    .sflex-container > div {
+        color: white;
+        font-size: 13px;
+    }
+    .nText, .uText {
+        color:  rgb(19, 19, 240);
+    } 
+    .lGrid-Container {
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-gap: 5px;
+        grid-template-rows: 30px 30px;
+    }
+    .lGrid-item1 {
+        background-color: red;
+        color: white;
+        text-align: center;
+        font-size: 12px;
+        padding: 5px;
+    }
+    .lGrid-item2 {
+        color: white;
+        background-color: rgb(1, 36, 49);
+        text-align: center;
+        font-size: 12px;
+        padding: 5px;
+}
+.mapFlexContainer {
+    display: flex;
+    flex-direction: column;
+}
+.mapFlexContainer > div {
+    font-size: 10px;
+    line-height: 2px;
+}    
+.footerFlexContainer {
+    display: flex;
+    flex-direction: column;
+    background: rgb(1, 1, 29);
+    border-top: 5px solid black;
+    height: 200px;
+    align-content: center;
+    justify-content: center;
+}
+.footerFlexContainer > div {
+    line-height: 2px;
+    color: white;
+}
+.flex-containerTawk {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.flex-containerTawk > div {
+    text-align: center;
+}        
+.envelopeDiv > button {
+    position: fixed;
+    bottom: 10px;
+    left: 20px;
+}
+.tawkDiv {
+    display: none;
+    position: fixed;
+    top: 0;
+    height: 100%;
+    width: 100%;
+}
+.faAngleDiv {
+    height: 50px;
+    color: white;
+    padding-top: 10px;
+}
+.fa-close {
+    color: white;
+}
+a:link, a:hover, a:active, a:visited {
+    text-decoration: none;
+}
+
+@media screen and (min-width: 768px) {
+    .grid-container1 {
+        display: flex;
+    }
+    .grid-item2 {
+        margin-right: 230px;
+    }
+    .grid-item1 {
+        margin-right: 10px;
+    }
+    .mediaDiv {
+        display: flex;
+    }
+    .carousel {
+        width: 70%;
+    }
+    .qPolicyDiv {
+        width: 30%;
+        height: auto;
+    }
+    .searchDiv {
+        margin-top: 150px;
+    }
+    .qltyImg {
+        width: 100%;
+        height: auto;
+    }
+    #filterDiv {
+        display: flex;
+    }
+    .addressDiv > p {
+        font-size: 16px;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .grid-item2 {
+        margin-right: 400px;
+    }
+    .grid-item1 {
+        margin-right: 20px;
+    }
+    .lGrid-Container {
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        grid-gap: 1px;
+        grid-template-rows: 0px 30px;
+    }
+    .lGrid-item1 {
+        background-color: red;
+        color: white;
+        text-align: center;
+        font-size: 15px;
+        padding: 10px;
+        height: 40px;
+    }
+    .lGrid-item2 {
+        color: white;
+        background-color: rgb(1, 36, 49);
+        text-align: center;
+        font-size: 15px;
+        padding: 10px;
+        height: 40px;
+    }
+    .fa-bars, .navbar-brand {
+        display: none;
+    }
+    .nav-item {
+        font-size: 16px;
+        border-bottom: none;
+    }
+    .aboutUs {
+        margin-right: 13px;
+    }
+    .fa-angle-down {
+        margin-top: 6px;
+    }
+    .navbar {
+        position: sticky;
+        top: 0;
+        bottom: 0;
+        z-index: 99;
+    }
+}
+@media screen and (min-width: 1200px) {
+    .grid-item2 {
+        margin-right: 620px;
+    }
+    .grid-item1 {
+        margin-right: 40px;
+    }
+    .nav-item {
+        font-size: 20px;
+    }
+    .addressDiv > p {
+        font-size: 20px;
+    }
+}
+#myBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    background-color: red;
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 4px;
+  }
+  
+  #myBtn:hover {
+    background-color: #555;
+  }
+</style>
+</head>
+
+<body onresize="myFunction()">
+<p id="demo"></p>
+
+<!--scroll to top Section-->
+<button onclick="topFunction()" id="myBtn"><i class="fa fa-arrow-up fa-2x"></i></button>
+
+<!--Header Section 1-->
+<div class="grid-container1 container ">
+    <div class="grid-item1"><i class="fa fa-phone"> Toll Free Number 122</i></div>
+    <div class="grid-item2"><i class="fa fa-envelope"> info@frsc.gov.ng</i></div>
+    <div class="grid-item3">
+        <i class="fa fa-twitter-square fa-2x"></i>
+        <i class="fa fa-facebook-square fa-2x"></i>
+        <i class="fa fa-instagram fa-2x"></i>
+        <i class="fa fa-youtube-square fa-2x"></i>
+        <i class="fa fa-rss-square fa-2x"></i>
+    </div>
+
+</div>
+<div class="mt-1"><img src="frscPayImg.jpg" class="max-auto d-block"></div>
+
+<!--Navbar Section-->
+<nav class="navbar navbar-dark navBarColor navbar-expand-lg">
+    <div data-toggle="collapse"  class="ml-3" data-target="#collapsibleNavbar">
+      <span class="fa fa-bars text-white mr-2"></span><span class="navbar-brand text-white menuSize">Menu</span>
+    </div>
+        <div class="collapse navbar-collapse ml-3" id="collapsibleNavbar">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="frscHome.html">Home</a></li>
+                <li class="nav-item">
+                  
+                    <!--"About Us" DropDown Section-->
+                    <div class="dropdown">
+                       <a class="nav-link" data-toggle="dropdown" href="#"><span class="aboutUs">About Us</span><i class="fa fa-angle-down"></i></a>
+                        <div class="dropdown-menu navBarColor">
+                                <a class="dropdown-item dropdown-item1" href="frscWhatWeDo.html">- What We Do</a>
+                             
+                                <!--"Structure" DropDown Section-->
+                                <a class="dropdown-item yat" data-toggle="dropdown" href="#">- Structure<i class="fa fa-angle-down"></i></a>
+                                    <div class="dropdown-menu navBarColor">
+                                    <a class="dropdown-item regularA" href="frscRMarshal.html">-- Regular Marshal</a>
+                                    <a class="dropdown-item marshalA" href="frscSMarshal.html">-- Special Marshals</a>
+                                    </div> 
+                                   
+                            
+                                <a class="dropdown-item" href="">- Department, Corps Offices and Special Units</a>
+                                <a class="dropdown-item" href="">- Past Leaders</a>
+                                <a class="dropdown-item" href="">- Members</a>
+                                <a class="dropdown-item" href="">- Staff Welfare</a>
+                                <a class="dropdown-item dropdown-item7" href="">- RTC Data</a>
+                        </div>        
+                    </div>  
+
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Administration</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Commands</a>
+                </li>  
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Government Charters</a>
+                </li>      
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Offences & Penalties</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Courtesy Visit</a>
+                </li>  
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Career</a>
+                </li>      
+            </ul>
+        </div>
+    </nav>
+</div>
+<div class="mediaDiv container-fluid"> <!--This Div is created because of MediaQuery, and only closes carousel and search Img-->  
+ 
+    <!-- The slideshow -->
+ <div id="demo" class="carousel slide" data-ride="carousel">   
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="frscImg1.jpg" alt="Los Angeles" width="100%" height="auto">
+      </div>
+      <div class="carousel-item">
+        <img src="frscImg2.jpg" alt="Chicago" width="100" height="auto">
+      </div>
+      <div class="carousel-item">
+        <img src="frscImg3.jpg" alt="New York" width="100%" height="auto">
+      </div>
+      <div class="carousel-item">
+        <img src="frscImg4.jpg" alt="New York" width="100%" height="auto">
+      </div>
+      <div class="carousel-item">
+        <img src="frscImg5.jpg" alt="New York" width="100%" height="auto">
+      </div>
+      <div class="carousel-item">
+        <img src="frscImg6.jpg" alt="New York" width="100%" height="auto">
+      </div>
+    </div>
+    
+    <!-- Left and right controls -->
+    <a class="carousel-control-prev" href="#demo" data-slide="prev">
+      <span class="carousel-control-prev-icon bg-dark"></span>
+    </a>
+    <a class="carousel-control-next" href="#demo" data-slide="next">
+      <span class="carousel-control-next-icon bg-dark"></span>
+    </a>
+  </div>
+
+  <!--Filter Section-->
+   <div class="qPolicyDiv container mt-2">
+    <img src="frscQpImg.jpg" alt="img" class="max-auto d-block mb-2 qltyImg">
+        <div class="input-group searchDiv">
+          <input type="text" id="filterInput" class="form-control" placeholder="Keywords..." name="search">
+          <div class="input-group-append">
+              <button class="btn btn-default" type="submit">Search</button>
+          </div>
+        </div>  
+   </div>   
+</div> <!--End of MediaQuery Div-->         
+
+    <!--Filter Content-->
+<div class="mt-4 container" id="filterDiv">
+<div>
+<i class="fa fa-newspaper-o mr-2 mb-1 text-primary"></i><b class="nText">FRSC News</b>
+<ul>
+    <li><a href="">RE-2018 Federal Road Safety Corps Recruitment Exercise</a></li>
+    <li><a href="">Corps Marshal Warns FRSC Staff Against Partisan Political Activities</a></li>
+    <li><a href="">FRSC Board Chairman Decorates Newly Promoted Officers, Charges Them On Discipline
+                   And Productivity</a></li>
+    <li><a href="">Corps Marshal Applauds Fashola on Implementation of Road Audit Report</a></li>
+    <li><a href="">FRSC Board sets to Reward Hard Working Staff - Chairman</a></li>
+</ul>
+</div>
+<div>
+<i class="fa fa-newspaper-o  mt-1 mr-2 text-primary"></i><span><b class="uText">Useful Links</b></span>
+    <div class="sflex-container">
+        <div class="sFlex-item">More News</div>
+    </div>
+<ul>
+<li><a href="">NIMC  Pre-enrolment Portal</a></li>
+<li><a href="">List of Approved Centres for Number Plates</a></li>
+<li><a href="">List of Unclaimed Drivers's Licence</a></li>
+<li><a href="">Accredited Driving School</a></li>
+<li><a href="">FRSC Perfomance Score Card</a></li>
+<li><a href="">State Traffic Management Agencies</a></li>
+<li><a href="">Decade of Action on Road Safety</a></li>
+<li><a href="">Sustainable development goals (SDG)</a></li>
+</ul>
+</div>
+</div><br>
+
+<!--Buttom Link Section-->
+<div class="lGrid-Container container">
+    <div class="lGrid-item1"><i class="fa fa-search mr-2"></i><span>CONTACT US</span></div>
+    <div class="lGrid-item2"><i fa class="fa fa-lock mr-2"></i><span>STAFF ONLY</span></div>
+    <div class="lGrid-item2"><i fa class="fa fa-video-camera mr-2"></i><span>VIDEO</span></div>
+    <div class="lGrid-item2 gD"><i class="fa fa-newspaper-o mr-2"></i><span>PUBLICATIONS</span></div>
+</div>
+
+<!--Map Section-->
+<div class="mapFlexContainer mt-2 ml-5 container">
+    <div id="map" style="width:100%;height:100px"></div>
+    <div class="addressDiv">
+        <p>Federal Road Safety Corps</p>
+        <p>National Headquarters</p>
+        <p>No.4 Maputo Street, Zone 3, Wuse,</p>
+        <p>Abuja, Nigeria</p>
+    </div><br>
+    <div class="addressDiv">
+        <p><b>PHONE</b></p>
+        <p>122-Toll Free Number</p>
+        <p>0700-CALL-FRSC</p>
+        <p>0700-2255-3772</p>
+        <p>080-7769-0055-CPEO CUUG</p>
+        <p>0807-769-0363 (Text Message Only)</p>
+    </div>
+</div><br><br>
+
+<!--Footer Section-->
+<div class="footerFlexContainer container">
+    <div><p style="text-align: center; font-size: 12px">Copyright FRSC OFFICIAL WEBSITE.- Disclaimer |</p>
+         <p style="text-align: center; font-size: 12px">Privacy Policy-All Right Reserved</p>
+    </div>
+    <div style="text-align: center">
+        <a href=""><i class="fa fa-twitter-square fa-2x"></i></a>
+        <a href=""><i class="fa fa-facebook-square fa-2x"></i></a>
+        <a href=""><i class="fa fa-instagram fa-2x"></i></a>
+    </div>
+</div>
+
+<!--Fixed Form Section-->
+<div class="envelopeDiv" onclick="getElementById('myId').style.display='block'">
+    <button class="btn btn-primary text-white" type="submit"><i class="fa fa-envelope-open-o mr-2"></i><span>Mail</span></button>
+</div>
+
+<div class="flex-containerTawk form-group tawkDiv bg-white" id="myId">    
+    <div class="bg-primary faAngleDiv"><span>offline</span><a href="" class="fa fa-close fa-2x mr-2 close">
+    </a></div>
+<form action="/action_page.php" class="container">
+    <div class="mt-2">
+        <label style="text-align: center; color: black">Please fill out the form below and we will get back to you as soon as possible.</label>
+        </div>
+        <div>
+        <input class="form-control mb-3 mt-2" placeholder="*Name" type="text">
+        </div>
+        <div>
+        <input class="form-control mb-3" placeholder="*Email" type="email">
+        </div>
+        <div>
+            <textarea class="form-control mb-3" rows="4" placeholder="*Message" type="text"></textarea>
+        </div>
+        <div class="container-fluid" style="margin-top: 200px">
+            <button class="btn btn-primary btn-block" type="submit">Submit</button>
+        </div>
+</form>   
+    <div>Powered by <b>tawk.to</b></div>
+     </div>
+
+</body>
+</html>
