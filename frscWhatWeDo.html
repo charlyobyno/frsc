@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  <!--Screen Size Script-->
+  <script>
+    function myFunction() {
+    var w = window.outerWidth;
+    var h = window.outerHeight;
+    var txt = "Window size: width=" + w + ", height=" + h;
+    document.getElementById("demo").innerHTML = txt;
+}
+</script>
+<!--Scroll up  script section-->
+<script>
+    // When the user scrolls down 400px from the top of the document, show the button
+    window.onscroll = function() {scrollFunction()};
+    
+    function scrollFunction() {
+        if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) {
+            document.getElementById("myBtn").style.display = "block";
+        } else {
+            document.getElementById("myBtn").style.display = "none";
+        }
+    }
+    
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    }
+    </script>
+  
+<style>
+    .grid-container1 {
+        display: grid;
+        grid-auto-columns: auto auto;
+        justify-content: center;
+        grid-gap: 15px;
+}
+    .grid-container1 > div {
+        text-align: center;
+    }
+    .grid-item3 {
+        grid-column: 1 / span 2;
+    }
+    .fa-twitter-square {
+        color: skyblue;
+    }
+    .fa-facebook-square {
+        color: blue;
+    }
+    .fa-instagram {
+        color: rgb(6, 6, 230);
+    }
+    .fa-youtube-square {
+        color: red;
+    }
+    .fa-rss-square {
+        color: orangered;
+    }
+    .navBarColor {
+        background-color: rgb(2, 2, 49);
+    }
+    .menuSize {
+        font-size: 15px;
+    }
+    .nav-item, .dropdown-item {
+        color: white;
+        font-size: 11px;
+        border-bottom: 1px solid gray;
+    }
+    .dropdown-item1 {
+        border-top: 1px solid gray;
+     }
+     .dropdown-item7 {
+         border-bottom: none;
+     }
+    .dropdown-item:hover {
+        color: red;
+        background-color: rgb(2, 2, 49);
+    }
+    .fa-angle-down {
+        position: absolute;
+        right: 7px;
+    }
+    .payImg {
+        width: 100%;
+        height: auto;
+    }
+    .whatWeDo {
+        background: rgb(2, 2, 49);
+        color: white;
+        padding: 20px 0 20px 30px;
+    }
+    .writeUp {
+        margin: 30px;
+        font-size: 13px;
+        color: rgb(10, 10, 71);
+    }
+    .fa-facebook-square {
+    color: rgb(3, 3, 218);
+}
+    .fa-instagram-square {
+    color: rgb(1, 1, 34);
+}
+    .fa-twitter-square {
+    color: rgb(46, 46, 243);
+}
+    .fa-rss-square {
+    color: orangered;
+}
+    .listStyle {
+        list-style: square;
+}
+    .listStyle > li > a {
+        color: blue;
+}   
+.qpImg {
+    width: 100%;
+    height: auto;
+}
+.footerFlexContainer {
+    display: flex;
+    flex-direction: column;
+    background: rgb(1, 1, 29);
+    border-top: 5px solid black;
+    height: 180px;
+    align-content: center;
+    justify-content: center;
+}
+.footerFlexContainer > div {
+    
+    color: white;
+}
+.flex-containerTawk {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.flex-containerTawk > div {
+    text-align: center;
+}        
+
+.envelopeDiv > button {
+    position: fixed;
+    bottom: 10px;
+    left: 20px;
+}
+.tawkDiv {
+    display: none;
+    position: fixed;
+    top: 0;
+    height: 100%;
+    width: 100%;
+}
+.faCloseDiv {
+    height: 50px;
+    color: white;
+    padding-top: 10px;
+}
+.fa-close {
+    color: white;
+}
+.regularA, .marshalA {
+        margin-left: 15px;
+    }
+
+#myBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    background-color: red;
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 4px;
+  }
+  
+  #myBtn:hover {
+    background-color: #555;
+  }
+</style>
+</head>
+
+<body onresize="myFunction()">
+<p id="demo"></p>
+
+<!--scroll to top Section-->
+<button onclick="topFunction()" id="myBtn"><i class="fa fa-arrow-up fa-2x"></i></button>
+        
+
+    <!--Header Section 1-->
+    <div class="grid-container1 container">
+        <div class="grid-item1"><i class="fa fa-phone"> Toll Free Number 122</i></div>
+        <div class="grid-item2"><i class="fa fa-envelope"> 
+            info@frsc.gov.ng</i></div>
+        <div class="grid-item3">
+            <i class="fa fa-twitter-square fa-2x"></i>
+            <i class="fa fa-facebook-square fa-2x"></i>
+            <i class="fa fa-instagram fa-2x"></i>
+            <i class="fa fa-youtube-square fa-2x"></i>
+            <i class="fa fa-rss-square fa-2x"></i>
+        </div>
+    
+    </div>
+    <div class="mt-1"><img src="frscPayImg.jpg" class="max-auto d-block payImg"></div>
+    
+    <!--Navbar Section-->
+    <nav class="navbar navbar-dark navBarColor">
+            <div data-toggle="collapse"  class="ml-3" data-target="#collapsibleNavbar">
+              <span class="fa fa-bars text-white mr-2"></span><span class="navbar-brand text-white menuSize">Menu</span>
+            </div>
+                <div class="collapse navbar-collapse ml-3" id="collapsibleNavbar">
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a class="nav-link" href="C:\Users\AKAMS\Documents\Bluetooth Folder\.vscode\Bootstrap4\frscHome.html">Home</a></li>
+                        <li class="nav-item">
+                          
+                            <!--"About Us" DropDown Section-->
+                            <div class="dropdown">
+                               <a class="nav-link" data-toggle="dropdown" href="#">About Us<i class="fa fa-angle-down"></i></a>
+                                <div class="dropdown-menu navBarColor">
+                                        <a class="dropdown-item dropdown-item1" href="C:\Users\AKAMS\Documents\Bluetooth Folder\.vscode\Bootstrap4\frscWhatWeDo.html">- What We Do</a>
+                                     
+                                        <!--"Structure" DropDown Section-->
+                                        <a class="dropdown-item yat" data-toggle="dropdown" href="#">- Structure<i class="fa fa-angle-down"></i></a>
+                                            <div class="dropdown-menu navBarColor">
+                                            <a class="dropdown-item regularA" href="C:\Users\AKAMS\Documents\Bluetooth Folder\.vscode\Bootstrap4\frscRMarshal.html">-- Regular Marshal</a>
+                                            <a class="dropdown-item marshalA" href="C:\Users\AKAMS\Documents\Bluetooth Folder\.vscode\Bootstrap4\frscSMarshal.html">-- Special Marshals</a>
+                                            </div> 
+                                           
+                                    
+                                        <a class="dropdown-item" href="">- Department, Corps Offices and Special Units</a>
+                                        <a class="dropdown-item" href="">- Past Leaders</a>
+                                        <a class="dropdown-item" href="">- Members</a>
+                                        <a class="dropdown-item" href="">- Staff Welfare</a>
+                                        <a class="dropdown-item dropdown-item7" href="">- RTC Data</a>
+                                </div>        
+                            </div>  
+        
+                        </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Administration</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Commands</a>
+                    </li>  
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Government Charters</a>
+                    </li>      
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Offences & Penalties</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Courtesy Visit</a>
+                    </li>  
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Career</a>
+                    </li>      
+                </ul>
+            </div><br>
+        </nav>
+    <div class="whatWeDo"><span>What We Do</span></div>
+    </div>
+
+    <!--Write Up Section-->
+    <div class="writeUp">
+        <span> In February 1988, the federal Government created the federal Road Safety Commission through
+               Decree 35 of 1992 referred to in the statute books as the FRSC Act Cap 141 Laws of 
+               the Federation of Nigeria (LFN). Passed by the National Assemble as Federal Road Safety Commission
+               (establishment) Act 2007.
+        </span>
+        <p class="mt-3"><b>The Corps Vision</b></p>
+        <span>
+            To eradicate road traffic crashes and create safe monitoring environment in Nigeria.
+        </span><br><br>
+        <p><b>Mission Statement</b></p>
+        <span>The Mission of the corpe is to Regulate, Enforce and Coordinate all Road Traffic and 
+              Safety Management activities through: ● Sustained public enlightenment ● Robust data Management
+              ● Improved vehicle Administration ● Prompt rescue services ● Effective patrol operation. 
+        </span><br><br>
+        <p>In particular, the Commisison is charged with the responsibilities for:</p>
+             <ul>
+                 <li>Preventing or minimizing accidents on the highway;</li>
+                 <li>Clearing obstrctions on any part of the highways;</li>
+                 <li>Educating drivers, motorists and other members of the public generally on the proper se of the highway</li>
+                 <li>Designing and producing the driver's license to be used by various categories of vehicle operators;</li>
+                 <li>Determine, from the time to time, the reqirements to be satisfied by an applicant for a driver's licence;</li>
+                 <li></li>
+                 <li></li>
+                 <li></li>
+                 <li></li>
+                 <li></li>
+                 <li></li>
+                 <li></li>
+                 <li></li>
+             </ul>
+
+        <!--Write sth here-->
+
+        <!--Socila Media Section-->
+        <p class="text-primary">Follow Us</p>
+        <div>
+                <a href=""><i class="fa fa-facebook-square fa-2x"></i></a>
+                <a href=""><i class="fa fa-instagram fa-2x"></i></a>
+                <a href=""><i class="fa fa-twitter-square fa-2x"></i></a>
+                <a href=""><i class="fa fa-rss-square fa-2x"></i></a>
+        </div><br>
+
+        <!--News Section-->
+            <p><b>FRSC News</b></p>
+                <ul class="listStyle">
+                    <li><a href="">RE-2018 Federal Road Safety Corps Recruitment Exercise</a></li>
+                    <li><a href="">Corps Marshal Warns FRSC Staff Against Partisan Political Activities</a></li>
+                    <li><a href="">FRSC Board Chairman Decorates Newly Promoted Officers, Charges Them On Discipline
+                                   And Productivity</a></li>
+                    <li><a href="">Corps Marshal Applauds Fashola on Implementation of Road Audit Report</a></li>
+                    <li><a href="">FRSC Board sets to Reward Hard Working Staff - Chairman</a></li>
+                </ul><br>
+    <p class="text-primary">Quality Policy</p>
+    <img src="frscQpImg.jpg" class="max-auto d-block qpImg">            
+</div>
+<!--Footer Section-->
+<div class="footerFlexContainer container">
+    <div><p style="text-align: center; font-size: 12px">Copyright FRSC OFFICIAL WEBSITE.- Disclaimer |</p>
+         <p style="text-align: center; font-size: 12px">Privacy Policy-All Right Reserved</p>
+    </div>
+    <div style="text-align: center">
+        <a href=""><i class="fa fa-twitter-square fa-2x"></i></a>
+        <a href=""><i class="fa fa-facebook-square fa-2x"></i></a>
+        <a href=""><i class="fa fa-instagram fa-2x"></i></a>
+    </div>
+
+<!--Fixed Form Section-->
+<div class="envelopeDiv" onclick="getElementById('myId').style.display='block'">
+    <button class="btn btn-primary text-white" type="submit"><i class="fa fa-envelope-open-o mr-2"></i><span>Mail</span></button>
+</div>
+
+<div class="flex-containerTawk form-group tawkDiv bg-white" id="myId">    
+    <div class="bg-primary faCloseDiv"><span>offline</span><a href="" class="fa fa-close fa-2x mr-2 close">
+    </a></div>
+<form action="/action_page.php" class="container">
+    <div class="mt-2">
+        <label style="text-align: center; color: black">Please fill out the form below and we will get back to you as soon as possible.</label>
+        </div>
+        <div>
+        <input class="form-control mb-3 mt-2" placeholder="*Name" type="text">
+        </div>
+        <div>
+        <input class="form-control mb-3" placeholder="*Email" type="email">
+        </div>
+        <div>
+            <textarea class="form-control mb-3" rows="4" placeholder="*Message" type="text"></textarea>
+        </div>
+        <div class="container-fluid" style="margin-top: 200px">
+            <button class="btn btn-primary btn-block" type="submit">Submit</button>
+        </div>
+</form>   
+    <div>Powered by <b>tawk.to</b></div>
+     </div>
+</body>
+</html>
